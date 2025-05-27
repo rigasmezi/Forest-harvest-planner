@@ -1,0 +1,101 @@
+[tool.pyright]
+
+include = ["scripts"]
+pythonVersion = "3.12"
+pythonPlatform = "Linux"
+typeCheckingMode = "strict"
+
+reportMissingTypeStubs = false
+reportUnknownLambdaType = false
+
+[tool.ruff]
+
+exclude = [".git", "conda", "data", "logs"]
+line-length = 240
+target-version = "py312"
+
+[tool.ruff.lint]
+
+select = [
+    # "C90",    # mccabe
+    # "D",      # pydocstyle
+    # "PTH",    # fla@ext:tamasfe.even-better-tomlvet
+    "F",      # pyflakes
+    "E",      # pycodestyle error
+    "W",      # pycodestyle warning
+    "I",      # isort
+    "N",      # pep8-naming
+    "UP",     # pyupgrade
+    "YTT",    # flake8-2020
+    "ANN",    # flake8-annotations
+    "ASYNC",  # flake8-async
+    "ASYNC1", # flake8-trio
+    "S",      # flake8-bandit
+    "BLE",    # flake8-blind-except
+    "FBT",    # flake8-boolean-trap
+    "B",      # flake8-bugbear
+    "A",      # flake8-builtins
+    "COM",    # flake8-commas
+    "CPY",    # flake8-copyright
+    "C4",     # flake8-comprehensions
+    "DTZ",    # flake8-datetimez
+    "T10",    # flake8-debugger
+    "DJ",     # flake8-django
+    "EM",     # flake8-errmsg
+    "EXE",    # flake8-executable
+    "FA",     # flake8-future-annotations
+    "ISC",    # flake8-implicit-str-concat
+    "ICN",    # flake8-import-conventions
+    "G",      # flake8-logging-format
+    "INP",    # flake8-no-pep420
+    "PIE",    # flake8-pie
+    "T20",    # flake8-print
+    "PYI",    # flake8-pyi
+    "PT",     # flake8-pytest-style
+    "Q",      # flake8-quotes
+    "RSE",    # flake8-raise
+    "RET",    # flake8-return
+    "SLF",    # flake8-self
+    "SLOT",   # flake8-slots
+    "SIM",    # flake8-simplify
+    "TID",    # flake8-tidy-imports
+    "TC",     # flake8-type-checking
+    "INT",    # flake8-gettext
+    "ARG",    # flake8-unused-arguments
+    "PGH",    # pygrep-hooks
+    "PL",     # pylint
+    "TRY",    # tryceratops
+    "FLY",    # flynt
+    "NPY",    # numpy-specific rules
+    "AIR",    # airflow
+    "PERF",   # perflint
+    "FURB",   # refurb
+    "RUF",    # ruff-specific rules
+]
+ignore = [
+    "ANN401",  # Dynamically typed expressions (typing.Any) are disallowed in '**kwargs'
+    "D401",    # First line of docstring should be in imperative mood
+    "SIM105",  # Use 'contextlib.suppress(ValueError)' instead of 'try'-'except'-'pass'
+    "PLR0912", # Too many branches
+    "PLR0913", # Too many arguments in function definition
+    "PLR0915", # Too many statements
+    "PLW2901", # loop variable overwritten by assignment target
+    "RUF012",  # Mutable class attributes should be annotated with 'typing.ClassVar'
+    "T201",    # 'print' found
+    "TRY003",  # Avoid specifying long messages outside the exception class
+    "EM101",   # Exception must not use a string literal, assign to variable first
+    "EM102",   # Exception must not use an f-string literal, assign to variable first
+    "B008",    # Do not perform function call in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable
+    "B023",    # Function definition does not bind loop variable
+    "B905",    # 'zip()' without an explicit 'strict=' parameter
+    "FBT001",  # Boolean-typed positional argument in function definition
+    "FBT002",  # Boolean default positional argument in function definition
+    "FBT003",  # Boolean positional value in function call
+    "S603",    # 'subprocess' call: check for execution of untrusted input
+    "RET503",  # Missing explicit 'return' at the end of function able to return non-'None' value
+]
+
+[tool.ruff.format]
+
+docstring-code-format = true
+docstring-code-line-length = "dynamic"

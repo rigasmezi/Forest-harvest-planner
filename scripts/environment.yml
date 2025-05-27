@@ -1,0 +1,23 @@
+name: mezi
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python>=3.12
+  - pip
+  - ipython
+  - requests
+  - geopandas
+  - pyogrio
+  - fiona
+  - rasterio
+  - py7zr
+  - python-pdal
+  - matplotlib
+  - jupyter
+  - gunicorn
+  - celery
+  - redis-py
+  - redis-server
+  - pip:
+    - dijkstra3d

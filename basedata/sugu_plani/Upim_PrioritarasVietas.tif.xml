@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="lv"><Esri><CreaDate>20190805</CreaDate><CreaTime>22064600</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.7\ArcToolbox\Toolboxes\Spatial Analyst Tools.tbx\Reclassify" Date="20190805" Time="220646">Reclassify BB_reclas.tif Value "0 NODATA;1 1" D:\sugu_plani\GRAMATA\PIELIKUMI\ceturtajam\Upim_PrioritarasVietas.tif DATA</Process></lineage></DataProperties></Esri></metadata>
